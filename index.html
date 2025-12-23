@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+	<h1>Каталог товарів</h1>
+	<div id="cart-info" class="cart-info">Товарів у кошику: 0</div>
+	<button onclick="clearcart()" id="clear-cart-btn" class="clear-cart-btn">Очистити кошик</button>
+	<div class="filters">
+		<input type="text" id="search-input" placeholder="Пошук">
+		<select id="category-filter">
+			<option value="All">Всі</option>
+			<option value="Simulator">Симулятор</option>
+			<option value="Action">Екшн</option>
+			<option value="RPG">РПГ</option>
+			<option value="Adventure">Пригоди</option>
+			<option value="Racing">Перегони</option>
+			<option value="Strategy">Стратегії</option>
+			<option value="VR">VR</option>
+			<option value="Shooter">Шутер</option>
+		</select>
+
+
+		<input type="number" id="min-price-input" placeholder="від 0 грн">
+
+
+	</div>
+</header>
+
+<main>
+	<div id="results-info"></div>
+	<div id="products-container" class="products-container">
+	  
+	</div>
+</main>
+
+<footer>
+	<p>2025. Створено на курсі WEB PRO</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
