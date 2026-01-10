@@ -1,48 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GameStore - Твій світ ігор</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
 <body>
+
 <header>
-	<h1>Каталог товарів</h1>
-	<div id="cart-info" class="cart-info">Товарів у кошику: 0</div>
-	<button onclick="clearcart()" id="clear-cart-btn" class="clear-cart-btn">Очистити кошик</button>
-	<div class="filters">
-		<input type="text" id="search-input" placeholder="Пошук">
-		<select id="category-filter">
-			<option value="All">Всі</option>
-			<option value="Simulator">Симулятор</option>
-			<option value="Action">Екшн</option>
-			<option value="RPG">РПГ</option>
-			<option value="Adventure">Пригоди</option>
-			<option value="Racing">Перегони</option>
-			<option value="Strategy">Стратегії</option>
-			<option value="VR">VR</option>
-			<option value="Shooter">Шутер</option>
-		</select>
+  <div class="header-main">
+    <div class="logo">
+        <h1>Game<span style="color: var(--accent-color)">Store</span></h1>
+        <img src="logo.png" alt="GameStore logo">
+    </div>
+    
+    <nav class="main-nav">
+        <a href="index.html" class="active">Головна</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="about.html">Про проєкт</a>
+    </nav>
 
-
-		<input type="number" id="min-price-input" placeholder="від 0 грн">
-
-
-	</div>
+    
+  </div>
 </header>
 
 <main>
-	<div id="results-info"></div>
-	<div id="products-container" class="products-container">
-	  
-	</div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Відкрий нові <br> <span class="text-gradient">Реальності</span></h2>
+      <p>Найкращі ігри для PC, PlayStation та Xbox за найнижчими цінами. Миттєва доставка ключів.</p>
+      <div class="hero-buttons">
+        <a href="catalog.html" class="btn-primary">Перейти до каталогу</a>
+        <a href="about.html" class="btn-secondary">Дізнатись про проєкт</a>
+      </div>
+    </div>
+    <div class="hero-glow"></div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="feature-card">
+      <div class="icon">🚀</div>
+      <h3>Миттєва доставка</h3>
+      <p>Отримуй ключ активації на пошту одразу після оплати.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">💎</div>
+      <h3>Кращі ціни</h3>
+      <p>Регулярні знижки та акції на топові новинки.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🛡️</div>
+      <h3>Гарантія якості</h3>
+      <p>Тільки офіційні ключі та повна підтримка 24/7.</p>
+    </div>
+  </section>
+
+  <section class="trending">
+    <h2 class="section-title">Хіти продажів</h2>
+    
+    <div class="products-container">
+        <div class="product-card">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/header.jpg" alt="Cyberpunk">
+            <div class="card-content">
+                <p class="product-category">RPG / Action</p>
+                <h3>Cyberpunk 2077</h3>
+                <div class="product-footer">
+                    <p class="product-price">899 ₴</p>
+                    <a href="catalog.html" class="add-to-card-btn" style="text-decoration: none; text-align:center;">Купити</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg" alt="RDR2">
+             <div class="card-content">
+                <p class="product-category">Adventure</p>
+                <h3>Red Dead Redemption 2</h3>
+                <div class="product-footer">
+                    <p class="product-price">1199 ₴</p>
+                     <a href="catalog.html" class="add-to-card-btn" style="text-decoration: none; text-align:center;">Купити</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/730/header.jpg" alt="CS2">
+             <div class="card-content">
+                <p class="product-category">Shooter</p>
+                <h3>Counter-Strike 2 Prime</h3>
+                <div class="product-footer">
+                    <p class="product-price">550 ₴</p>
+                     <a href="catalog.html" class="add-to-card-btn" style="text-decoration: none; text-align:center;">Купити</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
-	<p>2025. Створено на курсі WEB PRO</p>
+  <p>© 2025 GameStore. Створено для геймерів.</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
