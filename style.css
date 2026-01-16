@@ -32,23 +32,7 @@ nav a {
   transition: color 0.3s;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: -4px;
-  background: #000000;
-  transition: width 0.3s;
-}
 
-nav a:hover::after {
-  width: 100%;
-}
-nav a:hover {
-  color: #ffe6e6;
-}
 
 footer p {
   margin: 0;
@@ -891,3 +875,4 @@ main {
   border-bottom: 1px solid rgba(255,255,255,0.15);
   padding: 20px;
   text-align: center;
+
