@@ -1,46 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GameStore - Каталог</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap">
 </head>
 <body>
-<header>
-	<h1>Каталог товарів</h1>
-	<div id="cart-info" class="cart-info">Товарів у кошику: 0</div>
-	<button onclick="clearcart()" id="clear-cart-btn" class="clear-cart-btn">Очистити кошик</button>
-	<div class="filters">
-		<input type="text" id="search-input" placeholder="Пошук">
-		<select id="category-filter">
-			<option value="All">Всі</option>
-			<option value="Simulator">Симулятор</option>
-			<option value="Action">Екшн</option>
-			<option value="RPG">РПГ</option>
-			<option value="Adventure">Пригоди</option>
-			<option value="Racing">Перегони</option>
-			<option value="Strategy">Стратегії</option>
-			<option value="VR">VR</option>
-			<option value="Shooter">Шутер</option>
-		</select>
 
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="GameStore logo" class="brand-logo">
+      <span class="brand-title">Game<span class="accent">Store</span></span>
+    </a>
 
-		<input type="number" id="min-price-input" placeholder="від 0 грн">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Відкрити меню">
+      <span class="hamburger"></span>
+    </button>
 
-
-	</div>
+    <nav id="main-nav" class="main-nav" aria-label="Основна навігація">
+      <a href="index.html" class="nav-link">Головна</a>
+      <a href="catalog.html" class="nav-link active">Каталог</a>
+      <a href="about.html" class="nav-link">Про проєкт</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-	<div id="results-info"></div>
-	<div id="products-container" class="products-container">
-	  
-	</div>
+  <h1>Каталог товарів</h1>
+  <div id="cart-info" class="cart-info">Товарів у кошику: 0</div>
+  <button onclick="clearcart()" id="clear-cart-btn" class="clear-cart-btn">Очистити кошик</button>
+
+  <div class="filters">
+    <input type="text" id="search-input" placeholder="Пошук">
+    <select id="category-filter">
+      <option value="All">Всі</option>
+      <option value="Simulator">Симулятор</option>
+      <option value="Action">Екшн</option>
+      <option value="RPG">РПГ</option>
+      <option value="Adventure">Пригоди</option>
+      <option value="Racing">Перегони</option>
+      <option value="Strategy">Стратегії</option>
+      <option value="VR">VR</option>
+      <option value="Shooter">Шутер</option>
+    </select>
+    <input type="number" id="min-price-input" placeholder="від 0 грн">
+  </div>
+
+  <div id="results-info"></div>
+  <div id="products-container" class="products-container"></div>
 </main>
 
-<footer>
-	<p>2025. Створено на курсі WEB PRO</p>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2025 GameStore. Створено для геймерів.</p>
+    <nav class="footer-nav" aria-label="Додаткові посилання">
+      <a href="about.html">Контакти</a>
+      <a href="about.html">Політика конфіденційності</a>
+    </nav>
+  </div>
 </footer>
 
 <script src="script.js"></script>
