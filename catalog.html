@@ -57,7 +57,7 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>© 2025 GameStore. Створено для геймерів.</p>
+    <p>© 2026 GameStore. Створено для геймерів.</p>
     <nav class="footer-nav" aria-label="Додаткові посилання">
       <a href="about.html">Контакти</a>
       <a href="about.html">Політика конфіденційності</a>
@@ -66,5 +66,27 @@
 </footer>
 
 <script src="script.js"></script>
+
+<script>
+
+  (function(){
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('main-nav');
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+      btn.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.main-nav a').forEach(a => {
+      a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        
+      });
+    });
+  })();
+</script>
+
 </body>
 </html>
