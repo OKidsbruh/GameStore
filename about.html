@@ -1,23 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GameStore - Про проєкт</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap">
 </head>
 <body>
-<header>
-	<h1>Про проєкт</h1>
-	</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="GameStore logo" class="brand-logo">
+      <span class="brand-title">Game<span class="accent">Store</span></span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Відкрити меню">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Основна навігація">
+      <a href="index.html" class="nav-link">Головна</a>
+      <a href="catalog.html" class="nav-link">Каталог</a>
+      <a href="about.html" class="nav-link active">Про проєкт</a>
+    </nav>
+  </div>
 </header>
 
-<main></main>
+<main>
+  <h1>Про проєкт</h1>
 
-<footer>
-	<p>2026. Створено на курсі WEB PRO</p>
+
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 GameStore. Створено для геймерів.</p>
+    <nav class="footer-nav" aria-label="Додаткові посилання">
+      <a href="about.html">Контакти</a>
+      <a href="about.html">Політика конфіденційності</a>
+    </nav>
+  </div>
 </footer>
 
 <script src="script.js"></script>
+
+<script>
+
+  (function(){
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('main-nav');
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+      btn.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.main-nav a').forEach(a => {
+      a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        
+      });
+    });
+  })();
+</script>
+
 </body>
 </html>

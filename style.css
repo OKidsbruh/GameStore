@@ -844,6 +844,7 @@ body{
   .brand-title{font-size:18px}
   .product-img{height:140px}
   .hero-visual{height:160px}
+  .footer-nav{flex-direction: column}
 }
 .filters {
   background: rgba(255,255,255,0.05);
@@ -885,6 +886,15 @@ main {
     box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2); 
 }
 .products-grid{
+  display:flex;
+  gap:20px;
+  justify-content:space-between;
+  margin-top:48px;
+  margin-bottom:36px;
+  flex-wrap:wrap;
+}
+
+.hero-actions{
   display:flex;
   gap:20px;
   justify-content:space-between;
