@@ -877,6 +877,7 @@ main {
   padding: 20px;
 
   text-align: center;
+}
 .product-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -892,4 +893,5 @@ main {
   margin-bottom:36px;
   flex-wrap:wrap;
 }
+
 
