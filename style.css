@@ -839,6 +839,16 @@ body{
   .container{padding:0 16px}
   .hero{padding:40px 0}
 }
+@media (max-width: 534px){
+  .hero-actions {
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    gap: 12px;              
+    margin-top: 24px;       
+  }
+}
+
 
 @media (max-width: 420px){
   .brand-title{font-size:18px}
