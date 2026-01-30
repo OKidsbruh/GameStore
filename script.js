@@ -9,7 +9,7 @@ const products = [
     platform_xbox: true,
     inStock: true,
     discount: false,
-    isTop: true,
+    isTop: false,
     feedback: "Найкращий футбольний симулятор року!",
     description: "Революційний футбольний симулятор з гіперреалістичною фізикою Hypermotion V та оновленими складами команд.",
     age_limit: false,
@@ -27,7 +27,7 @@ const products = [
     platform_xbox: true,
     inStock: true,
     discount: false,
-    isTop: true,
+    isTop: false,
     feedback: "Захоплюючий візуал та динаміка.",
     description: "Напружений кооперативний шутер від третьої особи проти безжальних машин у постапокаліптичному світі.",
     age_limit: true,
@@ -45,7 +45,7 @@ const products = [
     platform_xbox: false,
     inStock: true,
     discount: true,
-    isTop: true,
+    isTop: false,
     feedback: "Неймовірна глибина сюжету.",
     description: "Глибока футуристична рольова гра у відкритому світі, де кожен ваш вибір кардинально змінює фінал історії.",
     age_limit: true,
@@ -99,7 +99,7 @@ const products = [
     platform_xbox: true,
     inStock: true,
     discount: false,
-    isTop: true,
+    isTop: false,
     feedback: "Епічні битви сталевих гігантів.",
     description: "Високотехнологічний екшн про тактичні битви гігантських бойових роботів у зруйнованих містах.",
     age_limit: true,
@@ -153,7 +153,7 @@ const products = [
     platform_xbox: true,
     inStock: true,
     discount: false,
-    isTop: true,
+    isTop: false,
     feedback: "Високий рівень змагань.",
     description: "Кіберспортивний командний шутер з реалістичною балістикою та акцентом на тактичну взаємодію.",
     age_limit: true,
@@ -337,6 +337,7 @@ productsArray.forEach(function(product){
   card.innerHTML = `
     <img src="${product.image}">
     <h3>${product.title}</h3>
+    ${product.isTop ? '<p class="badge top">Хіт продажу</p>' : ''}
     <p class="product-category">Категорія: ${product.category}</p>
     <p class="product-description">${product.description}</p>
     <p class="product-price">Ціна: ${product.price}₴</p>
@@ -360,7 +361,9 @@ function filterAndRender() {
   const selectedCategory = categoryFilter.value;
   const minPriceValue = minPriceInput.value;
 
+
   const filteredProducts = products.filter(function (product) {
+
     const title = product.title.toLowerCase();
     const description = product.description.toLowerCase();
 
@@ -378,7 +381,10 @@ function filterAndRender() {
       product.price >= Number(minPriceValue);
 
     return matchesText && matchesCategory && matchesPrice;
+    
+
   });
+  filteredProducts.sort((a, b) => b.isTop - a.isTop);
   function updateResultsInfo(count) {
   if (count > 0) {
     resultsInfo.textContent = `Знайдено товарів: ${count}`;
