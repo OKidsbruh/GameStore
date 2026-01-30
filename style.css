@@ -912,3 +912,65 @@ main {
   margin-bottom:36px;
   flex-wrap:wrap;
 }
+
+
+.about-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+}
+
+
+.profile-card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.profile-header {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    border: 2px solid var(--accent);
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+h8{
+  display: flex;
+  font-size: 1.5em;
+  justify-content:center;
+}
+
+h4{
+  display: flex;
+  font-size: 20px;
+  justify-content:center;
+}
